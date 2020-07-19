@@ -11,6 +11,99 @@
         <Source name="../../../cores/PLL/PLL.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/CRC16_CCITT.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/debug_coprocessor.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/debug_coprocessor_wrapper.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/debug_reply.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/debug_UART.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/HW_Loader/source/Serial_RS232.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/memory/Lattice/MachXO3D/dual_port_ram.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/memory/Lattice/MachXO3D/single_port_ram.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/memory/Lattice/MachXO3D/single_port_ram_8bit.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/memory/dram_rw_buffer.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/memory/mem_controller.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/peripherals/UART/UART_FIFO.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/peripherals/UART/UART_RX.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/peripherals/UART/UART_RX_WITH_FIFO.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/peripherals/UART/UART_TX.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/peripherals/peripherals.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/source/PulseRain_Reindeer_MCU.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Reindeer_core.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_controller.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_CSR.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_data_access.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_execution_unit.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_fetch_instruction.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_instruction_decode.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_machine_timer.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_memory.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_mm_reg.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_reg_file.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/absolute_value.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/long_slow_div_denom_reg.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../source/submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/mul_div/mul_div_32.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="../../constraints/lattice/MachXO3D_breakout.sdc" type="Synplify Design Constraints File" type_short="SDC">
             <Options/>
         </Source>
