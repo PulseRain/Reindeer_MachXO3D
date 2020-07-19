@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="MachXO3D" device="LCMXO3D-9400HC-5BG256C" default_implementation="breakout">
+    <Options/>
+    <Implementation title="breakout" dir="breakout" description="breakout" synthesis="synplify" default_strategy="Strategy1">
+        <Options>
+            <Option name="include path" value="../../../source/submodules/HW_Loader/source;../../../source/submodules/PulseRain_MCU/common;../../../source/submodules/PulseRain_MCU/common/MachXO3D_breakout"/>
+        </Options>
+        <Source name="../../../source/MachXO3D_breakout/MachXO3D_breakout.sv" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../../cores/PLL/PLL.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../constraints/lattice/MachXO3D_breakout.sdc" type="Synplify Design Constraints File" type_short="SDC">
+            <Options/>
+        </Source>
+        <Source name="MachXO3D.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="MachXO3D1.sty"/>
+</BaliProject>
