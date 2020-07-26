@@ -1,13 +1,15 @@
 # Reindeer_MachXO3D
-Port RISC-V to Lattice MachXO3D Breakout board
+Port RISC-V to Lattice MachXO3D Breakout board (Rev A)
 
 ## Clone the GitHub Repository
 
 $ git clone https://github.com/PulseRain/Reindeer_MachXO3D.git
+
 $ cd Reindeer_MachXO3D
+
 $ git submodule update --init --recursive
 
-## Install Diamond 
+## Install Lattice Diamond Software
 
 Visit 
 
@@ -22,6 +24,17 @@ Install Lattice Diamond and the correspondent license
 
 ![Programmer](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/programmer.png "Programmer")
 
+The FPGA image above contains PulseRain FRV2100 RISC-V core, and it will light up the led in a rotating fashion. Please set DIP-SW 1 and 2 for LED pattern, and set DIP-SW 3 and 4 for LED refreshing rate.
+
+
+## Prepare the board for UART
+* The RISC-V core needs a UART for programming and communication. The MachXO3D Breakout board carries a FTDI FT2232H chip, with 2 channels. Channel A is used for FPGA programming. And Channel B can be used as a UART for RISC-V.
+
+* However, to enable the UART, some extra work has to be done
+  1. The resistors R14 and R14 are DNI on the board. They should be installed (0 Ohm or simply connect with bard solder).
+  2. The EEPROM for the FT2232H needs to be reconfigued. To do that, please install the [FT_PROG utility](https://www.ftdichip.com/Support/Utilities.htm#FT_PROG) from [Future Technology Devices International Ltd](https://www.ftdichip.com/index.html)
+  
+  
 
 
 
