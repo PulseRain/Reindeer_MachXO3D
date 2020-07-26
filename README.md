@@ -31,13 +31,14 @@ The FPGA image above contains PulseRain FRV2100 RISC-V core, and it will light u
 * The RISC-V core needs a UART for programming and communication. The MachXO3D Breakout board carries a FTDI FT2232H chip, with 2 channels. Channel A is used for FPGA programming. And Channel B can be used as a UART for RISC-V.
 
 * However, to enable the UART, some extra work has to be done
-  1. The resistors R14 and R14 are DNI on the board. They should be installed (0 Ohm or simply connect with bard solder).
+  1. The resistors R14 and R14 are DNI on the board. They should be installed (0 Ohm or simply connect with bard solder), as shown below:
+     ![Breakout](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/Breakout.png "Breakout")
   2. The EEPROM for the FT2232H needs to be reconfigued. To do that, please install the [FT_PROG utility](https://www.ftdichip.com/Support/Utilities.htm#FT_PROG) from [Future Technology Devices International Ltd](https://www.ftdichip.com/index.html)
   3. Launch [FT_PROG utility](https://www.ftdichip.com/Support/Utilities.htm#FT_PROG), press F5 to scan the devices, set Hardware Specific/Port B/Hardware to be RS232 UART, as illustrated below:
-![FT_PROG](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/FT_PROG.png "FT_PROG")
+     ![FT_PROG](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/FT_PROG.png "FT_PROG")
   4. Press Ctrl+P to program the FT2232H
   5. In Windows Device Manager, use mouse to right click "Universal Serial Bus controller / USB Serial Converter B", choose Properties / Advanced Tab, and click the "Load VCP", as illustrated below:
-![USB Load VCP](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/USB_Load_VCP.png "USB Load VCP")
+     ![USB Load VCP](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/USB_Load_VCP.png "USB Load VCP")
   6. Unplug and replug the USB cable
   
   
