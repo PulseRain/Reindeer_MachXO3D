@@ -20,21 +20,16 @@
 `include "config.vh"
 
 module MachXO3D_breakout (
-<<<<<<< HEAD
+
     //------------------------------------------------------------------------
     //  clock and reset
     //------------------------------------------------------------------------
         input   wire                                osc_12MHz,
         input   wire                                CREST,
-=======
-    input   wire                                osc_12MHz,
-    output  wire   [7:0]                        LED,
->>>>>>> d0f9f79a822f1f34e2d5b5ca8c492f51a10de541
     
     //------------------------------------------------------------------------
     //  DIP / SW
     //------------------------------------------------------------------------
-<<<<<<< HEAD
         input   wire   [3 : 0]                      DIP_SW,
 
     //------------------------------------------------------------------------
@@ -48,11 +43,6 @@ module MachXO3D_breakout (
         
         input   wire                                UART_RXD,
         output  logic                               UART_TXD
-=======
-        
-        input   wire                            UART_RXD,
-        output  logic                           UART_TXD
->>>>>>> d0f9f79a822f1f34e2d5b5ca8c492f51a10de541
 );
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -93,7 +83,7 @@ module MachXO3D_breakout (
         
         wire                                    pll_locked;
         
-        localparam int C_DEBUG_UART_PERIOD      = (`MCU_MAIN_CLK_RATE) / (`DEBUG_UART_BAUD);
+        localparam int C_DEBUG_UART_PERIOD      = (`MCU_MAIN_CLK_RATE) / (115200);
         
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // PLL
@@ -128,7 +118,7 @@ module MachXO3D_breakout (
             end
         end
         
-        PulseRain_Reindeer_MCU PulseRain_Reindeer_MCU_i(
+        PulseRain_MCU PulseRain_MCU_i(
         //=====================================================================
         // clock and reset
         //=====================================================================
@@ -241,6 +231,6 @@ module MachXO3D_breakout (
               end
          end 
         
-		 
+         
          
 endmodule
