@@ -2,7 +2,7 @@
 NOTE Diamond (64-bit) 3.11.1.441 JEDEC Compatible Fuse File.*
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation.*
 NOTE All Rights Reserved.*
-NOTE DATE CREATED:	Sun Jul 26 00:38:25 2020*
+NOTE DATE CREATED:	Sun Jul 26 01:16:48 2020*
 NOTE DESIGN NAME:	MachXO3D_breakout.ncd*
 NOTE DEVICE NAME:	LCMXO3D-9400HC-5CABGA256*
 NOTE PIN ASSIGNMENTS*
@@ -16168,4 +16168,4 @@ L1605376
 C8497*
 NOTE User Electronic Signature Data*
 UH00000000*
-F360
+F362
