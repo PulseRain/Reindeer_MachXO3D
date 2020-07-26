@@ -43,5 +43,15 @@ The FPGA image above contains PulseRain FRV2100 RISC-V core, and it will light u
   
   
 
+## Use Arduino to program the software on RISC-V
+PulseRain FRV2100(Reindeer) RISC-V core can be developed and programmed through Arduino.
+* Install [Arudino IDE](https://www.arduino.cc/en/Main/Software). For Windows 10, it can also be installed through Microsoft Store
+* Launch [Arudino IDE](https://www.arduino.cc/en/Main/Software). In Menu File / Preferences, set Additional Boards Manager URLs to https://raw.githubusercontent.com/PulseRain/Arduino_RISCV_IDE/master/package_pulserain.com_index.json, as shown below:
+![URL](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/arduino.png "URL")
+* In Menu Tools/ Boards / Boards Manager..., Search Reindder, and Install PulseRain Reindeer 1.3.7 or higher, as shown below:
+![Boards Manager](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/board_manager.png "Boards Manager")
+* After the board package is installed, please select Menu / Boards / PulseRain RISC-V (Reindeer)/MachXO3D Breakout
+* Also, after the Breakout board is plugged in, please set Menu / Tools / Port acoordingly.
+* Now feel free to do the programming. The sketch used in the demo can be found in Reindeer_MachXO3D/sketch/breakout_demo
 
 
