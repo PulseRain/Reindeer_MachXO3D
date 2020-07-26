@@ -52,6 +52,7 @@ PulseRain FRV2100(Reindeer) RISC-V core can be developed and programmed through 
 ![Boards Manager](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/board_manager.png "Boards Manager")
 * After the board package is installed, please select Menu / Boards / PulseRain RISC-V (Reindeer)/MachXO3D Breakout
 * Also, after the Breakout board is plugged in, please set Menu / Tools / Port acoordingly.
-* Now feel free to do the programming. The sketch used in the demo can be found in Reindeer_MachXO3D/sketch/breakout_demo
+* Now feel free to do the programming. The sketch used in the demo can be found in [Reindeer_MachXO3D/sketch/breakout_demo](https://github.com/PulseRain/Reindeer_MachXO3D/tree/master/sketch/breakout_demo)
+
 
 
