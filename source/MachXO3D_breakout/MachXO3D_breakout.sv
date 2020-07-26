@@ -3,18 +3,28 @@
 `include "config.vh"
 
 module MachXO3D_breakout (
-    input   wire             osc_12MHz,
-    output  wire   [7:0]     LED,
+    //------------------------------------------------------------------------
+    //  clock and reset
+    //------------------------------------------------------------------------
+        input   wire                                osc_12MHz,
+        input   wire                                CREST,
+    
+    //------------------------------------------------------------------------
+    //  DIP / SW
+    //------------------------------------------------------------------------
+        input   wire   [3 : 0]                      DIP_SW,
+
+    //------------------------------------------------------------------------
+    //  LED
+    //------------------------------------------------------------------------
+        output  wire   [7:0]                        LED,
     
     //------------------------------------------------------------------------
     //  UART
     //------------------------------------------------------------------------
         
-        input   wire                            UART_RXD,
-        output  logic                           UART_TXD,
-        output  wire                            UART_CTS_N
-
-        
+        input   wire                                UART_RXD,
+        output  logic                               UART_TXD
 );
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -51,28 +61,28 @@ module MachXO3D_breakout (
         
         wire                                    processor_paused;
         
+        wire  unsigned [`NUM_OF_GPIOS - 1 : 0]  gpio_out;
+        
+        wire                                    pll_locked;
+        
         localparam int C_DEBUG_UART_PERIOD      = (`MCU_MAIN_CLK_RATE) / (`DEBUG_UART_BAUD);
-                
-          
         
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // PLL
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
-        
-        assign LED = {7'h0A, reset_n};
     
         PLL pll_i (
             .CLKI  (osc_12MHz), 
             .CLKOP (clk), 
-            .LOCK  (reset_n)
+            .LOCK  (pll_locked)
         );
-
+        
+        assign reset_n = pll_locked & CREST;
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // RISC-V
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-   
+        
         always_ff @(posedge clk, negedge reset_n) begin
             if (!reset_n) begin
                 init_start <= 0;
@@ -116,7 +126,7 @@ module MachXO3D_breakout (
             .ocd_mem_word_out                       (ocd_mem_word_out),
         
             .ocd_reg_read_addr                      (5'd2),
-            .ocd_reg_we                             (cpu_start),
+            .ocd_reg_we                             (actual_cpu_start),
             .ocd_reg_write_addr                     (5'd2),
             .ocd_reg_write_data                     (`DEFAULT_STACK_ADDR),
         
@@ -130,8 +140,8 @@ module MachXO3D_breakout (
         //=====================================================================
         // GPIO
         //=====================================================================
-            .GPIO_IN                                (0),
-            .GPIO_OUT                               (),
+            .GPIO_IN                                ({28'd0, DIP_SW}),
+            .GPIO_OUT                               (gpio_out),
      
         //=====================================================================
         // Interface for init/start
@@ -160,6 +170,8 @@ module MachXO3D_breakout (
             .peek_mem_addr                          ()
         );
         
+        assign LED = gpio_out[7 : 0];
+
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Hardware Loader
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -191,7 +203,7 @@ module MachXO3D_breakout (
         
         assign ocd_rw_addr = ocd_read_enable ? pram_read_addr [$high(ocd_rw_addr) : 0] : pram_write_addr [$high(ocd_rw_addr) : 0];        
          
-         always_ff @(posedge clk, negedge reset_n) begin : uart_proc
+        always_ff @(posedge clk, negedge reset_n) begin : uart_proc
               if (!reset_n) begin
                     UART_TXD <= 0;
               end else if (!debug_uart_tx_sel_ocd1_cpu0) begin
@@ -200,6 +212,7 @@ module MachXO3D_breakout (
                     UART_TXD <= uart_tx_ocd;
               end
          end 
-         
+        
+		 
          
 endmodule
