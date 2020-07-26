@@ -3,7 +3,7 @@
     <Options/>
     <Implementation title="breakout" dir="breakout" description="breakout" synthesis="synplify" default_strategy="Area">
         <Options>
-            <Option name="include path" value="../../../source/submodules/HW_Loader/source;../../../source/submodules/PulseRain_MCU/common;../../../source/submodules/PulseRain_MCU/common/MachXO3D_breakout"/>
+            <Option name="include path" value="../../../submodules/Hardware_Bootloader/source;../../../submodules/PulseRain_RISCV_MCU/common;../../../submodules/PulseRain_RISCV_MCU/common/MachXO3D_breakout"/>
         </Options>
         <Source name="../../../source/MachXO3D_breakout/MachXO3D_breakout.sv" type="Verilog" type_short="Verilog">
             <Options/>
