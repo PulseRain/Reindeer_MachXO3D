@@ -20,18 +20,15 @@
 `include "config.vh"
 
 module MachXO3D_breakout (
-    input   wire             osc_12MHz,
-    output  wire   [7:0]     LED,
+    input   wire                                osc_12MHz,
+    output  wire   [7:0]                        LED,
     
     //------------------------------------------------------------------------
     //  UART
     //------------------------------------------------------------------------
         
         input   wire                            UART_RXD,
-        output  logic                           UART_TXD,
-        output  wire                            UART_CTS_N
-
-        
+        output  logic                           UART_TXD
 );
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
