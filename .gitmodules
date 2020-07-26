@@ -1,0 +1,6 @@
+[submodule "submodules/PulseRain_RISCV_MCU"]
+	path = submodules/PulseRain_RISCV_MCU
+	url = https://github.com/PulseRain/PulseRain_RISCV_MCU.git
+[submodule "submodules/Hardware_Bootloader"]
+	path = submodules/Hardware_Bootloader
+	url = https://github.com/PulseRain/Hardware_Bootloader.git
