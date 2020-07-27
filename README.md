@@ -55,4 +55,9 @@ PulseRain FRV2100(Reindeer) RISC-V core can be developed and programmed through 
 * Now feel free to do the programming. The sketch used in the demo can be found in [Reindeer_MachXO3D/sketch/breakout_demo](https://github.com/PulseRain/Reindeer_MachXO3D/tree/master/sketch/breakout_demo)
 
 
+## Build the FPGA image from RTL
+To build the FPGA image from RTL, lauch Lattice Diamond software, and open the project under
+Reindeer_MachXO3D\build\lattice\MachXO3D_Breakout\MachXO3D.ldf
 
+In the process windows, right click the Export Files, and then click Rerun All, as show below:
+![Rerun All](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/lattice_diamond.png "Rerun All")
