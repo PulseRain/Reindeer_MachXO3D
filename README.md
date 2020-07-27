@@ -61,3 +61,9 @@ To build the FPGA image from RTL, lauch Lattice Diamond software, and open the p
 
 In the process windows, right click the Export Files, and then click Rerun All, as show below:
 ![Rerun All](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/lattice_diamond.png "Rerun All")
+
+## Quick Start Guide
+For more information, please see the Quick Start Guide at
+
+[https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/Reindeer_MachXO3D_Quick_Start_Guide.pdf](https://github.com/PulseRain/Reindeer_MachXO3D/raw/master/doc/Reindeer_MachXO3D_Quick_Start_Guide.pdf)
+
